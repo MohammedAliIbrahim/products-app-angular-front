@@ -1,0 +1,29 @@
+<h1 class="text-center">
+  products-list 
+</h1>
+
+<hr>
+<div *ngFor="let Product of allProducts;" >
+  
+ 
+  <div class="card-body text-center ">
+      <p class="card-text">{{Product.id}}</p>
+      <span>is archived ? </span> <p class="card-text text-alert">{{Product.isArchived}}</p>
+      <h4 class="card-title">{{Product.name |  uppercase }}</h4>
+     
+      <p class="card-text">{{ Product.CreateDate }}</p>
+
+
+     <span>check to archive</span>  <input name="arch" type="checkbox" value="{{Product.id}}">
+<hr>
+    
+     
+  </div>
+
+
+
+</div>
+
+<input type="button" value="archive selected" (click)="selectedArchives()">
+<br>
+<br>
